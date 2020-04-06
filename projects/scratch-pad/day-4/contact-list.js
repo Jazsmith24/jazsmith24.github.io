@@ -91,12 +91,9 @@ function makeContactList() {
         }
         }
         return contactName;
-    }
+    }s
 };
 }
-
-
-
 // YOUR CODE GOES ABOVE HERE //
 
 
