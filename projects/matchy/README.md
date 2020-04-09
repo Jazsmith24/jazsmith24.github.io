@@ -45,7 +45,7 @@ As we code, save and refresh the browser tab running Matchy. Your work will begi
  5. [ ] Using either notation, give `animal` a **property** called `noises` with a value of empty array.
  6. [ ] Print your `animal` Object to the console by adding, `console.log(animal);`,
  7. [ ] Save your work (command-s || ctrl-s), switch back to the browser tab with your website running, and refresh your page to see what `animal` looks like.
- 8. [ ] It should be something like: 
+ 8. [ ] It should be something like:  
 ~~~JS
 { species: 'duck', name: 'Jennifer', noises: [] }
 ~~~

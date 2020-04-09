@@ -21,6 +21,13 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+ 
+ // declare a variable named range that takes a start number and an end number
+ // create an empty array 
+ // check if start is less than end, loop from start to end and push each value in the array
+ // check if start is greater than end, loop start to end decrementing and push each value into the array
+ // return the array
+ 
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
   var arr = [];

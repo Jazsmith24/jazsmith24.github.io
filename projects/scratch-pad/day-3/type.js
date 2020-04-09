@@ -30,6 +30,9 @@ function isArray(value) {
  * null, not an Array, not a Date - all of these will return 'object' if used 
  * with typeof.
  */
+ 
+ // check if the type of value is an object,but it is not null, not an Array,& not a Date
+ // return true, false otherwise
 function isObject(value) {
     // YOUR CODE BELOW HERE //
    if(typeof value === 'object' && !Array.isArray(value) && value !== null && !(value instanceof Date)) {
@@ -45,6 +48,10 @@ return false;
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
+ 
+ // check if the value given is an object ,but it is not null, & not a Date, return true
+ // check if type of value is an array,but it is not null, & not a Date, return true
+ // otherwise return false
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
      if(typeof value === 'object' && value !== null && !(value instanceof Date)) {
@@ -75,6 +82,10 @@ return false;
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */ 
+ 
+ // check the type of the value input and return it's type as a string. 
+ // types: string, number, boolean, undefined, null, array, date, function, object.
+ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
     if (typeof value === "string"){
