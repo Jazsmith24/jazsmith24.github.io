@@ -70,13 +70,70 @@ let namePrint = printInput(name); // prints 'Jazmine' to console
 /**
  * SCOPE
  * 
+ * Scope refers to the visibility or accessibility of a variable or other resource in the area of your code.
+ * 
  * Types of scope:
  *  1. Global Scope
  *  2. Local Scope
  *  3. Block Scope
  * 
- * Scope refers to the visibility or accessibility of a variable or other resource in the area of your code.
+ * 1. A GLOBAL scoped variable has global scope, meaning all scripts and functions on a web page can access it.
  * 
+ * 2. A LOCAL scoped variable has a local scope, this refers to declarations that happen within the body of a function.
+ * Local variables are only recognized inside their functions.
  * 
+ * 3. A BLOCK scoped variable has a block scope, refers to declarations that happen within the body of a function.
  * 
+ * GLOBAL -global scope
+ * Function - Local scope
+ *     IF statements - block scope
+ *     Else statements - block scope
+ * LOOPS -block scope
+ * 
+ * Outer scopes do not have access to their inner scoped functions but inner scopes have access to their outer scope.
 */ 
+
+var globalVariable = "Jazmine"; // this is an example of a global variable. It is availiable to all functions and scripts in the page.
+
+
+// declare a function called greet that takes a string as a parameter
+// create a greeting variable with the string value of Hello
+// check if the inupt string has a length greater than 0
+// if so, concat the greeting var with the input string.
+// return greeting
+function greet(string){
+    var greeting = "Hello"; // local scope variable, only availibale within function
+    
+    if (string.length - 1 > 0){ // conditional statements are block scoped
+        greeting += ' ' + string;
+    }
+    return greeting;
+}
+
+console.log(greet(globalVariable)); // prints "Hello Jazmine" to console
+
+/**
+ * CLOSURES
+ * 
+ * What defines a CLOSURE?
+ * 
+ * An inner function with access to the parent scope, even after the parent function has closed.
+ * This inner function uses variables or parameters from a parent scope.
+ * 
+ * Closures are useful when returning functions from functions
+ * Keep variables alive in returned functions.
+ *
+ * 
+*/
+// named pass assigned with string of 'fluffy'
+var pass = "fluffy";
+
+// declare a function called password that returns a function that returns the input string from outer parameter
+
+function password(string){
+    return function(){
+        return string; // closure - parameter from outer scope
+    };
+}
+
+console.log(password(pass)); // will print [function] to the console
