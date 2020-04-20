@@ -221,7 +221,7 @@ return [sortedArray[0].tag, sortedArray[1].tag, sortedArray[2].tag];
 var genderCount = function (array, classifier){
     classifier = classifier || String;
     return array.reduce(function (counter, item) {
-        var p = classifier(item);
+        var p = classifier(item.gender);
         counter[p] = counter.hasOwnProperty(p) ? counter[p] + 1 : 1;
         return counter;
     }, {});
