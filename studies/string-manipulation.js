@@ -9,7 +9,7 @@
  *      1.  toUpperCase Method
  *      2.  toLowerCase Method
  *      3.  concat Method
- *      4.  Concatenation using addition operator
+ *      4.  charAt method
  *      5.  slice Method
  *      6.  replace Method
  * 
@@ -46,7 +46,7 @@ console.log(school.concat(" ", rating)); // prints  "Operation Spark is super co
 
 
 
-// 4. Concatenation Using addition operator - we can also use the + operator to combine string values //
+// Concatenation Using addition operator - we can also use the + operator to combine string values //
 
  let schoolRating = school + ' ' + rating; // string values combined with a space
  console.log(schoolRating); // prints  "Operation Spark is super cool!"
@@ -59,6 +59,16 @@ console.log(school.concat(" ", rating)); // prints  "Operation Spark is super co
  cheese += snack;
  
  console.log(cheese); // prints mozerallacrackers
+ 
+ 
+ 
+ // 4. charAt() Method - It returns the character at the specified index //
+ 
+ var charatcerStr = "Hello";
+ 
+ console.log(charatcerStr.charAt(2)); // prints 'l' to console
+ 
+ 
  
  
  /* 5. slice() Method - the slice method extracts part of a string and returns a shallow copy of the string. 

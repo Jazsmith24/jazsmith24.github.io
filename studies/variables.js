@@ -38,8 +38,8 @@ variableDeclared = [1, 2, 3, 4]; // variable value is changed to the array of nu
  *                              var varName;
  * 
  * Variable can be declared anywhere, and has no value until it is assigned.
- * Variables declared with var are global scoped. Variables declared inside functions assignments are only available
- * to the function's local scope.
+ * Variables declared with var are global scoped. 
+ * Variables declared inside functions assignments are only available to the function's local scope.
  * Variables declared with 'var' can be re-assigned.
  */ 
 
@@ -71,6 +71,10 @@ console.log(declaration); // 'var declared with var';
  * - can be re-assigned
 */ 
 
+// console.log(array); < -- Reference error
+/* Console logging before the declaration will throw a reference error because
+the variable is not availiable until the line in which it is declared has been reached.*/
+
 // Declaration //
 let array;
 
@@ -80,11 +84,16 @@ array = [1, 2, 3];
 // Re-assignment //
 array = [4, 5, 6];
 
+ console.log(array); // prints [4, 5, 6] to console
 // Variables declared with let within a function are not hoisted outside of it's scope
+
+
 function age(num){
  let myAge = num;
- console.log(myAge); // prints the value of myAge variable
+ console.log(myAge); // prints the value of myAge number value
 } 
+
+// let variables are not hoisted outside of it's scope
 // console.log(myAge); // If you try to console log my age from outside of it's scope, it will throw an reference error
 
 for (let i = 0; i < array.length; i++){ // the variable declared with let in this for loop is only availiable in it's block scope
