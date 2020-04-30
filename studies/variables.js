@@ -140,7 +140,7 @@ const school = "Operation Spark";
  */
  
  // example of variable declaration hoisting
- let hometown;
+ var hometown;
  
  hometown = "New Orleans"; // variable hometown will be hoisted to top of scope at run time. 
  
