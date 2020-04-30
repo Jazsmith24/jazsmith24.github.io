@@ -76,6 +76,8 @@
   * Following the parenthesis will be the curly braces. The curly braces holds all cases to test. If the case matches with the variable tested,
   * the code block following the case will execute. After each code block, you must include a break statement.
   * 
+  * You would want to use a switch statement over an if-else if- else chain if you woould like cleaner code.
+  * 
   */
   
   // set a variable named favorite food assigned with favorite food

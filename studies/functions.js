@@ -40,8 +40,13 @@ function firstCharacter(string){
  *  Calling a function, runs the code in the function body.
  * 
  *  SYNTAX for calling functions:  functionName(arguments);
+ * 
+ * Parameters are placeholders for our arguments.
+ * Arguments refers to the actual data that will be passed into the function.
  */ 
  console.log(firstCharacter(name)); // prints 'J' to the console.
+ 
+ 
  
 /** Function Expressions
  * 

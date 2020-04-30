@@ -35,16 +35,34 @@ let favSingers = ["Beyonce", "Jazmine Sullivan", "Tweet", "Durand Bernarr", "Bil
 
 // loop through the favSingers array
 // print values to console
-for (var i = 0; i < favSingers.length; i++){
-    console.log(favSingers[i]); //prints    Beyonce
-                                         // Jazmine Sullivan
-                                         // Tweet
-                                         // Durand Bernarr
-                                         // Bilal
+for (let i = 0; i < favSingers.length; i++){
+    console.log(favSingers[i]); //prints strings //  Beyonce
+                                                 // Jazmine Sullivan
+                                                 // Tweet
+                                                 // Durand Bernarr
+                                                 // Bilal
     
     }
     
-    
+// You can also loop backwards over an array
+
+for (let i = favSingers.length - 1; i > 0; i--){
+    console.log(favSingers[i]);
+    // prints strings:
+        // Bilal
+        // Durand Bernarr
+        // Tweet
+        // Jazmine Sullivan
+        // Beyonce
+}
+
+// Looping starting and stopping at specified indicies.
+for (let i = 1; i < 3; i++){
+    console.log(favSingers[i]); // starts at the 1st index and stops at the 3rd
+    // will print 'Jazmine Sullivan', 'Tweet', and 'Durand Bernarr' to console
+}    
+
+
 /**
  *  FOR-IN LOOP - used to loop over an object and access object keys/value individually.
  * 
