@@ -38,7 +38,7 @@ variableDeclared = [1, 2, 3, 4]; // variable value is changed to the array of nu
  *                              var varName;
  * 
  * Variable can be declared anywhere, and has no value until it is assigned.
- * Variables declared with var a global scoped. Variables declared inside functions are only available
+ * Variables declared with var are global scoped. Variables declared inside functions assignments are only available
  * to the function's local scope.
  * Variables declared with 'var' can be re-assigned.
  */ 
@@ -64,9 +64,11 @@ console.log(declaration); // 'var declared with var';
  *  Variables declared with let cannot be redeclared within it's scope.
  * 
  * - Variables declared with let are hoisted by it's name but not it's value.
- * - like var, let variables are not availiable until the interpreter reaches the line the variable is declared.
- * - Can be re-assigned
- * 
+ * - Let variables are hoisted to the top of their scope- But NOT Available until the interpreter 
+ *  reaches the line the variable is declared
+ * - Cannot re-declare a let variable in the same scope.
+ * - accessing let variables before they’re declared will throw a ReferenceError
+ * - can be re-assigned
 */ 
 
 // Declaration //
@@ -77,6 +79,13 @@ array = [1, 2, 3];
 
 // Re-assignment //
 array = [4, 5, 6];
+
+// Variables declared with let within a function are not hoisted outside of it's scope
+function age(num){
+ let myAge = num;
+ console.log(myAge); // prints the value of myAge variable
+} 
+// console.log(myAge); // If you try to console log my age from outside of it's scope, it will throw an reference error
 
 for (let i = 0; i < array.length; i++){ // the variable declared with let in this for loop is only availiable in it's block scope
     console.log(array[i]); // prints array values 4, 5, 6
@@ -90,6 +99,7 @@ for (let i = 0; i < array.length; i++){ // the variable declared with let in thi
  *  Variables declared with const must be initialized when declared.
  *  These variables cannot be changed thorugh re-declaration or re-assignment.
  *  Const variables are block scoped.
+ *  Accessing const variables before they’re declared will throw a ReferenceError
  * 
 */ 
 

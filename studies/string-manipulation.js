@@ -51,7 +51,15 @@ console.log(school.concat(" ", rating)); // prints  "Operation Spark is super co
  let schoolRating = school + ' ' + rating; // string values combined with a space
  console.log(schoolRating); // prints  "Operation Spark is super cool!"
  
-
+ // You can re-Assign and add string values together using the addition assignment operator
+ 
+ let cheese = 'mozeralla';
+ let snack = 'crackers';
+ 
+ cheese += snack;
+ 
+ console.log(cheese); // prints mozerallacrackers
+ 
  
  /* 5. slice() Method - the slice method extracts part of a string and returns a shallow copy of the string. 
         Syntax:  string.slice(start, end);
